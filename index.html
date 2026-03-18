@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guitar Chords by Hand Gesture</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1 class="title">Guitar Chords by Hand Gesture</h1>
+
+      <section class="stage" aria-label="Webcam and hand landmarks">
+        <div class="video-wrap">
+          <video id="video" autoplay playsinline muted></video>
+          <canvas id="overlay"></canvas>
+        </div>
+
+        <div class="panel">
+          <div class="row">
+            <span class="label">Status</span>
+            <span id="status" class="value">Loading…</span>
+          </div>
+          <div class="row">
+            <span class="label">Chord</span>
+            <span id="chord" class="value chord">—</span>
+          </div>
+        </div>
+
+        <details class="debug" id="debugPanel">
+          <summary>Debug (for mobile)</summary>
+          <pre id="debugLog" class="debug-log">—</pre>
+        </details>
+
+        <button id="playBtn" class="play" type="button" disabled>
+          Play Chord
+        </button>
+
+        <p class="hint">
+          Tip: Use a <strong>local server</strong> for webcam + module loading.
+          (Some browsers block camera access from file://)
+        </p>
+      </section>
+    </main>
+
+    <!-- Plain JS, no frameworks. -->
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

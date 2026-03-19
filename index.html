@@ -21,29 +21,19 @@
             <span class="label">Status</span>
             <span id="status" class="value">Loading…</span>
           </div>
+
           <div class="row">
             <span class="label">Chord</span>
             <span id="chord" class="value chord">—</span>
           </div>
         </div>
-
-        <details class="debug" id="debugPanel">
-          <summary>Debug (for mobile)</summary>
-          <pre id="debugLog" class="debug-log">—</pre>
-        </details>
-
-        <button id="playBtn" class="play" type="button" disabled>
-          Play Chord
-        </button>
-
-        <p class="hint">
-          Tip: Use a <strong>local server</strong> for webcam + module loading.
-          (Some browsers block camera access from file://)
-        </p>
       </section>
     </main>
 
-    <!-- Plain JS, no frameworks. -->
-    <script type="module" src="script.js"></script>
+    <div id="trainer"></div>
+    <div id="diagram"></div>
+
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
+

@@ -173,3 +173,25 @@ canvas {
 .bad {
   color: var(--danger);
 }
+
+#diagram {
+  position: fixed;
+  left: 16px;
+  bottom: 120px; /* 👈 ขยับขึ้น */
+  width: 200px;
+  z-index: 20;
+}
+
+@media (max-width: 768px) {
+  #diagram {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 140px;
+  }
+
+  #trainer {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 16px;
+  }
+}
